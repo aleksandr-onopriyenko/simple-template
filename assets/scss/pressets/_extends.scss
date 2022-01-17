@@ -1,0 +1,8 @@
+@use 'variables' as *;
+
+%container
+{
+    max-width: $lg + 30px;
+    margin: 0 auto;
+    padding: 0 $gap;
+}

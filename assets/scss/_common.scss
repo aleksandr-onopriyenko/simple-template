@@ -1,0 +1,46 @@
+@use 'pressets' as *;
+
+*,
+*::after,
+*::before
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html
+{
+    font-family: $font-main;
+    font-size: $fz-main;
+    line-height: 1.5em;
+
+    color: $base-color;
+}
+
+a
+{
+    text-decoration: none;
+
+    color: inherit;
+}
+
+body
+{
+    background-image: url(../img/background.jpg);
+    background-attachment: fixed;
+    background-position: 50% 0;
+}
+
+.wrapper
+{
+    display: flex;
+    flex-direction: column;
+
+    max-width: $lg;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0 $gap;
+
+    gap: $gap;
+}

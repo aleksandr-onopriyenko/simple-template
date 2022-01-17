@@ -1,0 +1,55 @@
+@use 'variables' as *;
+
+@mixin block-with-text
+{
+    font-size: 1rem;
+    line-height: 1.5;
+
+    display: -webkit-box;
+    overflow: hidden;
+
+    max-height: 70px;
+
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+}
+
+@mixin lg-min
+{
+    @media (min-width: $lg + 1)
+    {
+        @content;
+    }
+}
+
+@mixin lg-sm
+{
+    @media (max-width: $lg) and (min-width: $sm + 1)
+    {
+        @content;
+    }
+}
+
+@mixin sm
+{
+    @media (max-width: $sm + 1)
+    {
+        @content;
+    }
+}
+
+@mixin sm-xs
+{
+    @media (max-width: $sm) and (min-width: $xs + 1)
+    {
+        @content;
+    }
+}
+
+@mixin xs
+{
+    @media (max-width: $xs)
+    {
+        @content;
+    }
+}

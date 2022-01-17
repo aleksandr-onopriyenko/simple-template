@@ -1,0 +1,122 @@
+@use 'pressets' as *;
+
+.header
+{
+    position: relative;
+
+    display: flex;
+
+    width: 100%;
+    max-height: 120px;
+    padding: 34px 0;
+
+    justify-content: space-between;
+    gap: $gap;
+
+    &__burger
+    {
+        position: absolute;
+        z-index: 2;
+        top: 48%;
+        right: 0;
+
+        display: none;
+
+        width: 50px;
+        height: 50px;
+
+        transform: translateY(-48%);
+
+        background-color: rgba(#000, .25);
+
+        @include sm
+        {
+            display: block;
+        }
+        span
+        {
+            position: absolute;
+            top: 48%;
+            left: 10px;
+
+            display: block;
+
+            width: 30px;
+            height: 2px;
+
+            transition: .5s;
+            transform: rotate(0deg);
+
+            background: #fff;
+        }
+        span:first-child
+        {
+            top: 18px;
+        }
+        span:last-child
+        {
+            top: 30px;
+        }
+        &:hover
+        {
+            cursor: pointer;
+        }
+
+        &.header__burger--active
+        {
+            span
+            {
+                top: 48%;
+
+                transform: translateY(-50%);
+
+                opacity: 0;
+            }
+            span:first-child
+            {
+                transform: rotate(-135deg);
+
+                opacity: 1;
+            }
+            span:last-child
+            {
+                transform: rotate(-225deg);
+
+                opacity: 1;
+            }
+        }
+    }
+    &__menu
+    {
+        @include sm
+        {
+            display: none;
+            &--active
+            {
+                position: absolute;
+                bottom: 38px;
+                left: -15px;
+
+                display: flex;
+                flex-direction: column;
+
+                width: calc(100% + 30px);
+
+                transform: translateY(100%);
+                text-align: center;
+
+                background-color: rgba(#000, .4);
+
+                align-items: stretch;
+                gap: 0;
+
+                .menu__link
+                {
+                    padding: 15px;
+
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+}

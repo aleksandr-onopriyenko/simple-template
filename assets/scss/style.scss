@@ -1,16 +1,11 @@
-@import "../../libs/normalize-scss/sass/normalize/import-now";
+@use '../../libs/normalize-scss/sass/normalize/import-now';
+@use 'pressets' as *;
 
-@use "variables";
-@use "skin";
-
-@use "mixins";
-@use "extends";
-
-@use "common";
-@use "header";
-@use "menu";
-@use "main";
-@use "carousel";
-@use "left-sidebar";
-@use "bottom-sidebar";
-@use "footer";
+@use 'common';
+@use 'header';
+@use 'menu';
+@use 'main';
+@use 'carousel';
+@use 'left-sidebar';
+@use 'bottom-sidebar';
+@use 'footer';
