@@ -1,37 +1,33 @@
-@use 'pressets' as *;
+@use "pressets" as *;
 
-.menu
-{
-    display: flex;
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 
-    align-items: center;
-    justify-content: flex-end;
-    gap: 7px;
+  gap: 7px;
 
-    &__link
-    {
-        padding: 12px 15px;
+  &__link {
+    padding: 12px 15px;
 
-        transition: background-color .5s;
+    transition: background-color 0.5s;
 
-        color: $light-color;
-        border-radius: 15px;
+    color: $light-color;
+    border-radius: 15px;
 
-        &--active,
-        &:focus
-        {
-            background: linear-gradient(
-            to bottom,
-            #0f8bbe 0%,
-            #2989d8 50%,
-            #207cca 51%,
-            #0eb7fe 100%
-            );
-        }
-
-        &:hover
-        {
-            background: rgba($light-color, .2);
-        }
+    &--active,
+    &:focus {
+      background: linear-gradient(
+      to bottom,
+      #0f8bbe 0%,
+      #2989d8 50%,
+      #207cca 51%,
+      #0eb7fe 100%
+      );
     }
+
+    &:hover {
+      background: rgba($light-color, 0.2);
+    }
+  }
 }

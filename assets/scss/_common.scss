@@ -1,46 +1,41 @@
-@use 'pressets' as *;
+@use "pressets" as *;
 
 *,
 *::after,
-*::before
-{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-html
-{
-    font-family: $font-main;
-    font-size: $fz-main;
-    line-height: 1.5em;
+html {
+  color: $base-color;
 
-    color: $base-color;
+  font-family: $font-main;
+  font-size: $fz-main;
+  line-height: 1.5em;
 }
 
-a
-{
-    text-decoration: none;
+a {
+  text-decoration: none;
 
-    color: inherit;
+  color: inherit;
 }
 
-body
-{
-    background-image: url(../img/background.jpg);
-    background-attachment: fixed;
-    background-position: 50% 0;
+body {
+  background-image: url(../img/background.jpg);
+  background-attachment: fixed;
+  background-position: 50% 0;
 }
 
-.wrapper
-{
-    display: flex;
-    flex-direction: column;
+.wrapper {
+  display: flex;
+  flex-direction: column;
 
-    max-width: $lg;
-    min-height: 100vh;
-    margin: 0 auto;
-    padding: 0 $gap;
+  max-width: $lg;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 $gap;
 
-    gap: $gap;
+  gap: $gap;
 }
