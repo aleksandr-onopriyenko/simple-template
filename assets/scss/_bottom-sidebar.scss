@@ -2,19 +2,35 @@
 
 .bottom-sidebar {
   width: 100%;
-  min-height: 115px;
-  padding: 20px 15px;
-  background-color: #fff;
-  background-image: linear-gradient(to bottom, #f8f8f8 0%, #666666 100%);
-  background-position: 100% 100%;
+  min-height: 116px;
+  border: 5px solid #fff;
+
+  box-shadow: 0 0 1px $base-color;
 
   display: flex;
-  align-items: flex-start;
+  flex-wrap: wrap;
 
   &__item {
     display: flex;
-    align-items: center;
     flex-basis: 50%;
     gap: 15px;
+    padding: 20px 15px 30px 15px;
+    background: linear-gradient(to bottom, #fff, rgba($base-color, 0.05));
+
+    &:first-child {
+      border-right: 1px solid rgba($base-color, 0.2);
+    }
+
+    @include sm {
+      flex-basis: 100%;
+
+      &:first-child {
+        border-right: none;
+      }
+
+      &:nth-of-type(2n) {
+        flex-direction: row-reverse;
+      }
+    }
   }
 }
