@@ -1,0 +1,65 @@
+@use "pressets" as *;
+
+.main-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  .title {
+    margin-bottom: 17px;
+  }
+
+  p {
+    line-height: 1.75em;
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__left {
+    max-width: 285px;
+    padding: 0 10px 0 5px;
+    border-right: 1px solid rgba($base-color, 0.2);
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 7px 0 10px 19px;
+
+      font-style: italic;
+
+      li {
+        width: fit-content;
+        padding-left: 8.5px;
+
+        position: relative;
+        &::marker {
+          content: url(../img/main-list-arrow.png);
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          width: 94%;
+          height: 1px;
+
+          background: rgba($base-color, 0.2);
+
+          position: absolute;
+          bottom: -8px;
+        }
+      }
+    }
+  }
+
+  &__right {
+    padding: 0 5px 0 10px;
+    max-width: calc(100% - 290px);
+    text-align: justify;
+
+    i {
+      color: #000;
+    }
+  }
+}

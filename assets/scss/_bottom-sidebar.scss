@@ -1,0 +1,20 @@
+@use "pressets" as *;
+
+.bottom-sidebar {
+  width: 100%;
+  min-height: 115px;
+  padding: 20px 15px;
+  background-color: #fff;
+  background-image: linear-gradient(to bottom, #f8f8f8 0%, #666666 100%);
+  background-position: 100% 100%;
+
+  display: flex;
+  align-items: flex-start;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-basis: 50%;
+    gap: 15px;
+  }
+}

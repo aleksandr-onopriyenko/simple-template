@@ -14,25 +14,25 @@
 }
 
 @mixin lg-min {
-  @media (min-width: $lg + 1) {
+  @media (min-width: calc($lg + 1px)) {
     @content;
   }
 }
 
 @mixin lg-sm {
-  @media (max-width: $lg) and (min-width: $sm + 1) {
+  @media (max-width: $lg) and (min-width: calc($sm + 1px)) {
     @content;
   }
 }
 
 @mixin sm {
-  @media (max-width: $sm + 1) {
+  @media (max-width: calc($sm + 1px)) {
     @content;
   }
 }
 
 @mixin sm-xs {
-  @media (max-width: $sm) and (min-width: $xs + 1) {
+  @media (max-width: $sm) and (min-width: calc($xs + 1px)) {
     @content;
   }
 }
