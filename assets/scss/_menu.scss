@@ -8,6 +8,7 @@
   gap: 7px;
 
   &__link {
+    display: block;
     padding: 12px 15px;
 
     transition: background-color 0.5s;
@@ -18,11 +19,11 @@
     &--active,
     &:focus {
       background: linear-gradient(
-      to bottom,
-      #0f8bbe 0%,
-      #2989d8 50%,
-      #207cca 51%,
-      #0eb7fe 100%
+        to bottom,
+        #0f8bbe 0%,
+        #2989d8 50%,
+        #207cca 51%,
+        #0eb7fe 100%
       );
     }
 
