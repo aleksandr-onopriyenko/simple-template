@@ -1,26 +1,24 @@
 @use "pressets" as *;
 
 .bottom-sidebar {
-  width: 100%;
-  min-height: 116px;
-  border: 5px solid #fff;
-
-  box-shadow: 0 0 1px $base-color;
-
   display: flex;
   flex-wrap: wrap;
+
+  width: 100%;
+  min-height: 116px;
+
+  border: 5px solid #ffffff;
+  box-shadow: 0 0 1px $base-color;
 
   &__item {
     display: flex;
     flex-basis: 50%;
-    gap: 15px;
+
     padding: 20px 15px 30px 15px;
-    background: linear-gradient(to bottom, #fff, rgba($base-color, 0.05));
 
-    &:first-child {
-      border-right: 1px solid rgba($base-color, 0.2);
-    }
+    background: linear-gradient(to bottom, #ffffff, rgba($base-color, 0.05));
 
+    gap: 15px;
     @include sm {
       flex-basis: 100%;
 
@@ -31,6 +29,10 @@
       &:nth-of-type(2n) {
         flex-direction: row-reverse;
       }
+    }
+
+    &:first-child {
+      border-right: 1px solid rgba($base-color, 0.2);
     }
   }
 }

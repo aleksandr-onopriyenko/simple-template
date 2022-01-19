@@ -5,8 +5,8 @@ $('.header__burger').on('click', function () {
 });
 
 let $slideItems = $('.carousel-slide__item');
-let $nextBtn = $('.next.carousel-control');
-let $prevBtn = $('.prev.carousel-control');
+let $nextBtn = $('.carousel__control.next');
+let $prevBtn = $('.carousel__control.prev');
 let currentSlide = 0;
 
 let gotoSlide = (n) => {
@@ -31,11 +31,11 @@ let nextClickHandler = () => {
     slideInterval = setInterval(nextSlide, 5000);
 };
 
-// let prevClickHandler = () => {
-//     prevSlide();
-//     clearInterval(slideInterval);
-//     slideInterval = setInterval(nextSlide, 5000);
-// };
+let prevClickHandler = () => {
+    prevSlide();
+    clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, 5000);
+};
 
-// $nextBtn.on('click', nextClickHandler);
-// $prevBtn.on('click', prevClickHandler);
+$nextBtn.on('click', nextClickHandler);
+$prevBtn.on('click', prevClickHandler);

@@ -29,9 +29,10 @@ body {
 }
 
 .title {
+  color: $accent-color;
+
   font-size: 2rem;
   font-weight: 400;
-  color: $accent-color;
 }
 
 .wrapper {
