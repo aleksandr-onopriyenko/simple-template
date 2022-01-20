@@ -538,7 +538,7 @@ body {
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
-  background: #ffffff;
+  background: #efefef;
 }
 .header__burger span:first-child {
   top: 18px;
@@ -649,7 +649,7 @@ body {
 .carousel-slide {
   position: relative;
   width: 100%;
-  border: 7px solid #ffffff;
+  border: 7px solid #efefef;
 }
 .carousel-slide__item {
   display: -webkit-box;
@@ -686,15 +686,15 @@ body {
   max-width: 100%;
 }
 .carousel-slide__item-description {
-  padding-top: 12px;
+  padding-top: 11px;
   padding-right: 15px;
   padding-left: 5px;
-  color: #ffffff;
+  color: #efefef;
 }
 .carousel-slide__item-description-title {
   margin-top: 0;
   margin-bottom: 10px;
-  color: #ffffff;
+  color: #efefef;
   display: -webkit-box;
   overflow: hidden;
   -webkit-box-orient: vertical;
@@ -714,16 +714,16 @@ body {
 
 .prev {
   left: 0;
-  -webkit-transform: translate(calc(-50% + 6px), 10%);
-      -ms-transform: translate(calc(-50% + 6px), 10%);
-          transform: translate(calc(-50% + 6px), 10%);
+  -webkit-transform: translate(calc(-50% + 6px), 9%);
+      -ms-transform: translate(calc(-50% + 6px), 9%);
+          transform: translate(calc(-50% + 6px), 9%);
 }
 
 .next {
   right: 0;
-  -webkit-transform: rotate(180deg) translate(calc(-50% + 6px), -10%);
-      -ms-transform: rotate(180deg) translate(calc(-50% + 6px), -10%);
-          transform: rotate(180deg) translate(calc(-50% + 6px), -10%);
+  -webkit-transform: rotate(180deg) translate(calc(-50% + 6px), -9%);
+      -ms-transform: rotate(180deg) translate(calc(-50% + 6px), -9%);
+          transform: rotate(180deg) translate(calc(-50% + 6px), -9%);
 }
 
 .main-content {
@@ -808,7 +808,7 @@ body {
       flex-wrap: wrap;
   width: 100%;
   min-height: 116px;
-  border: 5px solid #ffffff;
+  border: 5px solid #efefef;
   -webkit-box-shadow: 0 0 1px #858585;
           box-shadow: 0 0 1px #858585;
 }
@@ -819,9 +819,9 @@ body {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   padding: 20px 15px 30px 15px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(rgba(133, 133, 133, 0.05)));
-  background: -o-linear-gradient(top, #ffffff, rgba(133, 133, 133, 0.05));
-  background: linear-gradient(to bottom, #ffffff, rgba(133, 133, 133, 0.05));
+  background: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(rgba(133, 133, 133, 0.05)));
+  background: -o-linear-gradient(top, #efefef, rgba(133, 133, 133, 0.05));
+  background: linear-gradient(to bottom, #efefef, rgba(133, 133, 133, 0.05));
   gap: 15px;
 }
 .bottom-sidebar__item:first-child {
@@ -835,7 +835,65 @@ body {
   padding-bottom: 30px;
 }
 .footer__wraper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 37px;
+}
+.footer-left__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 14px;
+  margin-bottom: 9px;
+}
+.footer-left__social-title {
+  padding: 5px 0;
+  color: #efefef;
   position: relative;
+}
+.footer-left__social-title:before {
+  content: "Follow Us";
+  font-size: 12px;
+  color: rgba(133, 133, 133, 0.8);
+  position: absolute;
+  bottom: 15px;
+}
+.footer-left__social-message {
+  margin-left: 37px;
+  padding: 20px;
+  padding-top: 32px;
+  padding-bottom: 18px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  position: relative;
+}
+.footer-left__social-message:before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 20px;
+  background-image: url(../img/twitter-speech-bubble.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(-95%);
+      -ms-transform: translateY(-95%);
+          transform: translateY(-95%);
+}
+.footer-left__social-message p {
+  margin-bottom: 10px;
+}
+.footer-left__social-message span {
+  font-size: 10px;
+  color: #0b81be;
+  font-style: italic;
+}
+.footer-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -843,67 +901,15 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  gap: 55px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-.footer__social {
-  position: absolute;
-  top: 0;
-  left: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 9px;
-}
-.footer__social-img {
-  position: relative;
-}
-.footer__social-message {
-  width: 262px;
-  padding: 32px 20px 18px 20px;
-  position: absolute;
-  top: 67px;
-  left: 52px;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
-}
-.footer__social-message p {
-  margin-bottom: 10px;
-}
-.footer__social-message span {
-  font-style: italic;
-  color: #0b81be;
-  font-size: 10px;
-}
-.footer__social-message:before {
-  content: "";
-  display: block;
-  width: 25px;
-  height: 20px;
-  background-image: url(../img/twitter-speech-bubble.png);
-  position: absolute;
-  top: -19px;
-  left: 0;
-}
-.footer__social-title {
-  padding: 5px;
-  color: #efefef;
-  position: relative;
-}
-.footer__social-title::before {
-  content: "Follow Us";
-  font-size: 12px;
-  color: rgba(133, 133, 133, 0.8);
-  position: absolute;
-  bottom: 15px;
-}
-.footer__menu {
+.footer-right__menu {
   font-size: 0.9rem;
   line-height: 1.5;
 }
-.footer__copy {
+.footer-right__copy {
   padding: 0 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -917,7 +923,7 @@ body {
           align-items: flex-end;
   gap: 13px;
 }
-.footer__copy span {
+.footer-right__copy span {
   color: #efefef;
 }
 @media (max-width: 769px) {
@@ -1017,13 +1023,33 @@ body {
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
   }
+  .footer {
+    padding-bottom: 13px;
+  }
   .footer__wraper {
-    height: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 58px;
   }
-  .footer__social-message {
-    width: calc(100% - 80px);
+  .footer-left {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
-  .footer__menu {
+  .footer-right {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer-right__copy {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer-right__menu {
     display: none;
   }
 }

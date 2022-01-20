@@ -6,6 +6,8 @@ const csscomb = require('gulp-csscomb');
 const autoprefixer = require('autoprefixer');
 const mqpacker = require('css-mqpacker');
 const sortCSSmq = require('sort-css-media-queries');
+const minifyCSS = require('gulp-minify-css')
+const rename = require('gulp-rename')
 
 const PATH = {
   scssFolder: './assets/scss/',
@@ -32,15 +34,23 @@ const PLUGINS = [
 function scss() {
   return src(PATH.scssFile)
       .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-      .pipe(postcss(PLUGINS))
+
+      .pipe(minifyCSS())
+      .pipe(rename({ extname: '.min.css' }))
       .pipe(dest(PATH.cssFolder))
+      .pipe(postcss(PLUGINS))
+
       .pipe(browserSync.stream());
 }
 
 function scssDev() {
   return src(PATH.scssFile, {sourcemaps: true})
       .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+      
+      .pipe(minifyCSS())
+      .pipe(rename({ extname: '.min.css' }))
       .pipe(dest(PATH.cssFolder, {sourcemaps: true}))
+
       .pipe(browserSync.stream());
 }
 
@@ -66,7 +76,7 @@ function watchFiles() {
   watch(PATH.scssFiles, series(scss));
   watch(PATH.htmlFiles, sync);
   watch(PATH.jsFiles, sync);
-  // watch(PATH.cssFiles, sync);
+  watch(PATH.cssFiles, sync);
 }
 
 function watchDevFiles() {

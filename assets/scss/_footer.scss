@@ -2,103 +2,130 @@
 
 .footer {
   min-height: 248px;
-  background-color: rgba(#000, 0.4);
   padding-top: 37px;
   padding-bottom: 30px;
 
+  background-color: rgba(#000000, 0.4);
+
+  @include sm {
+    padding-bottom: 13px;
+  }
+
   &__wraper {
-    position: relative;
-
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 55px;
+    flex-direction: row;
 
+    gap: 37px;
     @include sm {
-      height: 100%;
+      flex-wrap: wrap;
+
+      gap: 58px;
     }
   }
 
-  &__social {
-    position: absolute;
-    top: 0;
-    left: 15px;
-
-    display: flex;
-    gap: 9px;
-  }
-
-  &__social-img {
-    position: relative;
-  }
-
-  &__social-message {
-    width: 262px;
-    padding: 32px 20px 18px 20px;
-    position: absolute;
-    top: 67px;
-    left: 52px;
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
-
+  &-left {
     @include sm {
-      width: calc(100% - 80px);
+      flex-grow: 1;
+    }
+    &__social {
+      display: flex;
+
+      margin-bottom: 9px;
+
+      gap: 14px;
     }
 
-    p {
-      margin-bottom: 10px;
-    }
 
-    span {
-      font-style: italic;
-      color: $accent-color;
-      font-size: 10px;
-    }
 
-    &:before {
-      content: "";
-      display: block;
-      width: 25px;
-      height: 20px;
+    &__social-title {
+      position: relative;
 
-      background-image: url(../img/twitter-speech-bubble.png);
-      position: absolute;
-      top: -19px;
-      left: 0;
-    }
-  }
+      padding: 5px 0;
 
-  &__social-title {
-    padding: 5px;
-    color: $light-color;
-    position: relative;
-    &::before {
-      content: "Follow Us";
-      font-size: 12px;
-      color: rgba($base-color, 0.8);
-
-      position: absolute;
-      bottom: 15px;
-    }
-  }
-
-  &__menu {
-    font-size: 0.9rem;
-    line-height: 1.5;
-
-    @include sm {
-      display: none;
-    }
-  }
-
-  &__copy {
-    padding: 0 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 13px;
-    span {
       color: $light-color;
+      &:before {
+        position: absolute;
+        bottom: $gap;
+
+        content: "Follow Us";
+
+        color: rgba($base-color, 0.8);
+
+        font-size: 12px;
+      }
+    }
+
+    &__social-message {
+      position: relative;
+
+      margin-left: 37px;
+      padding: 20px;
+      padding-top: 32px;
+      padding-bottom: 18px;
+
+      border-radius: 10px;
+      background-color: rgba(#000000, 0.4);
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: block;
+
+        width: 25px;
+        height: 20px;
+
+        content: "";
+        transform: translateY(-95%);
+
+        background-image: url(../img/twitter-speech-bubble.png);
+      }
+
+      p {
+        margin-bottom: 10px;
+      }
+
+      span {
+        color: $accent-color;
+
+        font-size: 10px;
+        font-style: italic;
+      }
+    }
+  }
+  &-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include sm {
+      align-items: center;
+      flex-grow: 1;
+
+      &__copy {
+        align-items: center;
+      }
+    }
+    &__menu {
+      font-size: 0.9rem;
+      line-height: 1.5;
+
+      @include sm {
+        display: none;
+      }
+    }
+
+    &__copy {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+
+      padding: 0 $gap;
+
+      gap: 13px;
+      span {
+        color: $light-color;
+      }
     }
   }
 }
